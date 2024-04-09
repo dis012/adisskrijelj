@@ -1,0 +1,357 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+
+/*
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+*/
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /*new*/
+    display: flex; /* This will align your list items (icons) in a row */
+    justify-content: center; /* This centers the items horizontally */
+    align-items: center; /* This centers the items vertically if they have different heights */
+}
+
+/* Adjusts list items to remove default list styles and margins */
+.contact li {
+    margin: 0 10px;  /*Adds some space between the icons */
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+    text-align: center;
+}
+
+
+.contact li a {
+    color: white; /* Adjusts the icon color */
+    text-decoration: none; /* Removes underline from the link */
+}
+
+/* Adjusts the icon size and color */
+.contact li a i {
+    font-size: 36px;
+    color: white;
+}
+
+.contact li a:hover i {
+    color: #ccc; /* Lightens the icon on hover for a subtle effect */
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.adis {
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.button {
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+#intro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+    position: fixed; /* or absolute, depending on your layout */
+    z-index: 10; /* Ensure it's above other content initially */
+}
+
+#star-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensures the stars appear behind your content */
+}
+
+.centered-text {
+    text-align: center; /* Centers text horizontally */
+    max-width: 80%; /* Optional: constrains text width */
+    margin: auto; /* Helps in centering if max-width is set */
+}
+
+
+.header, .footer {
+    text-align: center;
+}
+
+/* Tab container styling */
+.tab-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Tab buttons styling */
+.tab-title {
+    padding: 10px;
+    cursor: pointer;
+    border: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: #5c6bc0;
+    color: white;
+    transition: background-color 0.4s ease;
+}
+
+.tab-title:hover {
+    background-color: #5c6bc0;
+    color: black;
+}
+
+.tab-title:hover {
+    background-color: #ddd;
+}
+
+/* Tab content styling */
+.tab-content {
+    display: none; /* Hide all tab content by default */
+    animation: fadeEffect 1s; /* Fade in effect */
+}
+
+.tab-content.active {
+    display: block; /* Show active tab content */
+}
+
+/* Keyframes for fade effect */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.education {
+    min-height: 20vh;
+
+}
+
+.me {
+    min-height: 40vh;
+
+}
+
+/* Continue from your existing CSS... */
+
+/* Styling for skill bars */
+.skillbar {
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    /*box-shadow: 0 2px 4px rgba(0,0,0,0.1);*/
+}
+
+.skillbar-title {
+    margin: 0 0 10px 0;
+    padding: 0;
+    background: none;
+}
+
+.skillbar-bar {
+    height: 30px;
+    width: 0%;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #4caf50, #81c784);
+    transition: width 2s ease-in-out;
+}
+
+.skillbar-bar span{
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.skill-bar-percent {
+    float: right;
+    margin-top: -25px;
+    margin-right: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.skills-wrapper {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.skillbar-coding {
+    min-height: 80vh;
+}
+
+.skillbar-tools {
+    min-height: 80vh;
+}
+
+.skillbar-engineering {
+    min-height: 60vh;
+}
+
+.skillbar-languages {
+    min-height: 60vh;
+}
+
+#experience {
+    max-width: 800px; /* Adjust based on your layout */
+    margin: auto;
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    min-height: 50vh;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.animate {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.item p {
+    flex: 1;
+    margin: 10px;
+}
+
+.item img {
+    width: 200px; 
+    height: auto;
+    flex: none;
+    margin: 10px;
+}
+
+#about-me {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+#about-me h2, #about-me h3 {
+    color: #5c6bc0; 
+    margin-bottom: 10px;
+}
+
+#about-me h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#about-me h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#about-me p {
+    font-size: 16px;
+    line-height: 1.6; /* Improves readability */
+    color: white; /* Dark gray for better readability */
+    margin-bottom: 15px; /* Adds space between paragraphs */
+}
+
+#skills h2 {
+    color: #5c6bc0;
+    margin-bottom: 10px;
+}
+
+#experience h2 {
+    color: #5c6bc0;
+    margin-bottom: 10px;
+}
+
+#experience h3 {
+    color: #5c6bc0;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+#contact-form {
+    width: 300px;
+    margin: auto;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 22px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
