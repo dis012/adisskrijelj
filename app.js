@@ -56,8 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenElements = document.querySelectorAll('.item');
     hiddenElements.forEach(el => observer.observe(el));
     
-    // Call the skill bars animation function directly if the Skills tab is initially visible
-    // This is useful if the "Skills" tab is the default active tab
+
     if (document.querySelector('#skills').classList.contains('active')) {
         initSkillBars();
     }
