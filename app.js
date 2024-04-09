@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createStars();
     animate();
 
-    // Adjust canvas size on window resize
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
