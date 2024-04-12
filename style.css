@@ -243,6 +243,10 @@ body, html {
     min-height: 60vh;
 }
 
+.skillbar-python-libraries{
+    min-height: 90vh;
+}
+
 #experience {
     max-width: 800px; /* Adjust based on your layout */
     margin: auto;
